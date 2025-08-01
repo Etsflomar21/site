@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #0b0b0b;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: rgba(255, 20, 147, 0.15);
+    border: 2px solid #ff1493;
+    border-radius: 20px;
+    padding: 30px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(255, 20, 147, 0.8);
+    animation: fadeIn 2s ease-in-out;
+}
+
+h1 {
+    font-size: 24px;
+    color: #ff1493;
+    margin-bottom: 5px;
+}
+
+.date {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.flower img {
+    width: 150px;
+    animation: pulse 2s infinite;
+}
+
+p {
+    font-size: 16px;
+    margin: 20px 0;
+    line-height: 1.5;
+}
+
+button {
+    background: #ff1493;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ff66cc;
+    display: none;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes pulse {
+    0%, 100% {transform: scale(1);}
+    50% {transform: scale(1.1);}
+}
+
+/* Corazones flotando */
+.heart {
+    position: absolute;
+    color: #ff1493;
+    font-size: 20px;
+    animation: float 5s linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes float {
+    0% {transform: translateY(0) translateX(0); opacity: 1;}
+    100% {transform: translateY(-600px) translateX(50px); opacity: 0;}
+}
+.flower img {
+    width: 150px;
+    filter: drop-shadow(0 0 10px #00ffff)
+            drop-shadow(0 0 20px #00ffff)
+            drop-shadow(0 0 30px #00ffff);
+    animation: electric 1s infinite alternate;
+}
+
+@keyframes electric {
+    0% {
+        filter: drop-shadow(0 0 5px #00ffff)
+                drop-shadow(0 0 15px #00ffff)
+                drop-shadow(0 0 25px #00ffff);
+    }
+    100% {
+        filter: drop-shadow(0 0 15px #00ffff)
+                drop-shadow(0 0 30px #00ffff)
+                drop-shadow(0 0 45px #00ffff);
+    }
+}
+.flower img {
+    width: 150px;
+    border-radius: 50%; /* Hace la imagen circular */
+    box-shadow: 0 0 15px #ff1493, 0 0 25px #00ffff; /* Glow */
+}
